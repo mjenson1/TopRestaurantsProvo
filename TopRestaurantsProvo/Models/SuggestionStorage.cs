@@ -11,7 +11,7 @@ namespace TopRestaurantsProvo.Models
 
         public static IEnumerable<SuggestionResponse> Suggestions => suggestions;
 
-        public static void AddSuggestion(SuggestionResponse suggestion) //adds an instance of a suggestion
+        public static void AddSuggestion(SuggestionResponse suggestion) //adds an instance of a suggestion 
         {
             suggestions.Add(suggestion);
         }
