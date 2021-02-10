@@ -13,11 +13,11 @@ namespace TopRestaurantsProvo.Models
         {
            RestaurantRanking = rank;//making it a read only property 
         }
-        [Required]
+        [Required (ErrorMessage = "You must enter a rank")]
         public int? RestaurantRanking { get;  } // setting as default value, property initializer, can't be changed
-        [Required]
+        [Required (ErrorMessage = "You must enter a restaurant name")]
         public string RestaurantName { get; set; }
-        [Required]
+        [Required (ErrorMessage = "You must enter an address")]
         public string RestaurantAddress { get; set; }
         #nullable enable
         public string? FavoriteDish { get; set; } = "It's all tasty!"; // if left null this is added
