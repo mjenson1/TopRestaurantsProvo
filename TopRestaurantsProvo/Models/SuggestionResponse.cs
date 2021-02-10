@@ -14,7 +14,7 @@ namespace TopRestaurantsProvo.Models
         public string Suggestion { get; set; }
         
         [RegularExpression(@"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}",
-         ErrorMessage = "Phone number must be in valid format.")] //I don't think this works actually but there is code in the view that does
+         ErrorMessage = "Phone number must be in valid format.")] //phone validation, also included in the view
         public string RestPhone { get; set; }
         
 

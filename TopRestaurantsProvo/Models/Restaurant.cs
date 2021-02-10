@@ -8,13 +8,13 @@ namespace TopRestaurantsProvo.Models
 {
     public class Restaurant
     {
-        
-        //public Restaurant(int rank)
-        //{
-           // RestaurantRanking = rank;//making it a read only property 
-        //}
+        //[Required]
+        public Restaurant(int rank)
+        {
+           RestaurantRanking = rank;//making it a read only property 
+        }
         [Required]
-        public int? RestaurantRanking { get; private set; } // setting as default value, property initializer, can't be changed
+        public int? RestaurantRanking { get;  } // setting as default value, property initializer, can't be changed
         [Required]
         public string RestaurantName { get; set; }
         [Required]
@@ -30,9 +30,9 @@ namespace TopRestaurantsProvo.Models
 
         public static Restaurant[] GetRestaurants()
         {
-            Restaurant r1 = new Restaurant()
+            Restaurant r1 = new Restaurant(1)
             {
-                RestaurantRanking = 1,
+                //RestaurantRanking = 1,
                 RestaurantName = "Cafe Rio",
                 FavoriteDish = "Sweet Pork Salad",
                 RestaurantAddress = "1122 S University Ave",
@@ -40,9 +40,9 @@ namespace TopRestaurantsProvo.Models
                 RestaurantWebsite = "caferio.com"
             };
 
-            Restaurant r2 = new Restaurant()
+            Restaurant r2 = new Restaurant(2)
             {
-                RestaurantRanking = 2,
+                //RestaurantRanking = 2,
                 RestaurantName = "Costa Vida",
                 FavoriteDish = "Sweet Pork Salad",
                 RestaurantAddress = "1200 N University Ave",
@@ -50,9 +50,9 @@ namespace TopRestaurantsProvo.Models
                 RestaurantWebsite = "costavida.com"
             };
 
-            Restaurant r3 = new Restaurant()
+            Restaurant r3 = new Restaurant(3)
             {
-                RestaurantRanking = 3,
+                //RestaurantRanking = 3,
                 RestaurantName = "Cafe Zupas",
                 FavoriteDish = "Chicken Avocado Sandwich",
                 RestaurantAddress = "408 W 2230 N",
@@ -60,9 +60,9 @@ namespace TopRestaurantsProvo.Models
                 RestaurantWebsite = "cafezupas.com"
             };
 
-            Restaurant r4 = new Restaurant()
+            Restaurant r4 = new Restaurant(4)
             {
-                RestaurantRanking = 4,
+                //RestaurantRanking = 4,
                 RestaurantName = "In-N-Out Burger",
                 FavoriteDish = "Double-Double",
                 RestaurantAddress = "350 E University Pkwy",
@@ -70,9 +70,9 @@ namespace TopRestaurantsProvo.Models
                 RestaurantWebsite = "in-n-out.com"
             };
             
-            Restaurant r5 = new Restaurant()
+            Restaurant r5 = new Restaurant(5)
             {
-                RestaurantRanking = 5,
+                //RestaurantRanking = 5,
                 RestaurantName = "Guru's Cafe",
                 //FavoriteDish = "Sweet Potato Fries",
                 RestaurantAddress = "350 E University Pkwy",
