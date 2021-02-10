@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Restaurant List";
+}
+
+@model IEnumerable<string> 
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Top 100 Restaurants</title>
+    <meta name="viewport" content="width-device-width"/>
+</head>
+<body>
+    <header>
+        <h4 class="bg-primary text-white text-center">These are the best restaurants in Provo</h4>
+    </header>
+    <div class="list-group">
+        <ul>
+            @foreach (string r in Model) //for each item (restaurant) in model go list it out
+            {
+                <li class="list-group-item">@r</li>
+            }
+        </ul>
+    </div>
+</body>
+
+</html>

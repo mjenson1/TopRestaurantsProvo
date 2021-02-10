@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Add a suggestion";
+}
+
+@model TopRestaurantsProvo.Models.SuggestionResponse
+
+<form asp-action="AddSuggestions" method="post">
+    <div>
+        <label asp-for="CustName">Enter your name:</label>
+        <input id="CustName" asp-for="CustName" />
+    </div>
+    <div>
+        <label asp-for="RestName">Restaurant Name:</label>
+        <input id="RestName" asp-for="RestName" />
+    </div>
+    <div>
+        <label asp-for="FaveDish">Favorite Dish:</label>
+        <input id="FaveDish" asp-for="FaveDish" />
+    </div>
+    <div>
+        <label asp-for="RestPhone">Restaurant Phone:</label>
+        <input id="RestPhone" asp-for="RestPhone" placeholder="123-456-7890" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/> @*this is the phone number validation*@
+    </div>
+    <div>
+        <label asp-for="Suggestion">Suggestion:</label>
+        <input id="Suggestion" asp-for="Suggestion" />
+    </div>
+    <button id="submit" type="submit" class="alert-primary">Add your suggestion</button>
+    <div asp-validation-summary="All"></div>
+
+</form>

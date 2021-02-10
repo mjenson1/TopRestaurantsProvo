@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Top Restaurants Provo</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" /> <!--Good ol' bootstrap, we love that-->
+</head>
+<body>
+    <div class="text-center">
+        <h1>@ViewBag.Title</h1>
+        <a class="btn btn-primary" asp-action="RestaurantList">View Top 5 Restaurants in Provo</a><br />
+        <a class="btn btn-success" asp-action="SuggestionList">View Suggestion List</a><br />
+        <a class="btn btn-danger" asp-action="AddSuggestions">Add a Suggestion</a><br /><br />
+    </div>
+
+    @RenderBody()
+
+    <br />
+    <br />
+
+    <div class="text-center">
+        <footer>Good Eats Provo</footer>
+    </div>
+</body>
+
+</html>
